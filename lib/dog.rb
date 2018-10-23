@@ -1,4 +1,6 @@
 class Dog
+  attr_reader :name
+
   @@all = []
 
   def initialize(name)
@@ -8,5 +10,9 @@ class Dog
 
   def self.clear_all
     @@all.clear
+  end
+
+  def self.all
+    @@all.each { |dog| puts dog.name }
   end
 end
